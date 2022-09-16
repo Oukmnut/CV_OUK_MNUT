@@ -29,6 +29,9 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <link href="calendar.css" rel="stylesheet">
+  <script async src="calendar.js"></script>
+
 </head>
 
 <body>
@@ -65,9 +68,34 @@
       <div class="mt-5">
         <button style="color: #0563bb;"><a href="OukMnutCV.pdf" target="_blank" class="telegram"><i
               class='bx bxs-file-pdf'></i>Resume</a></button>
-      </div>
+        <p id="timenow"></p> 
 
-    </div>
+        
+
+      </div>
+      
+        <div id="cal-wrap">
+          <!-- (A) PERIOD SELECTOR -->
+          <div id="cal-date">
+            <select id="cal-mth"></select>
+            <select id="cal-yr"></select>
+          </div>
+    
+          <!-- (B) CALENDAR -->
+          <div id="cal-container"></div>
+    
+          <!-- (C) EVENT FORM -->
+          <form id="cal-event">
+            <p id="evt-head"></p>
+            <div id="evt-date"></div>
+            <textarea id="evt-details" required></textarea>
+            <input id="evt-close" type="button" value="Close"/>
+            <input id="evt-del" type="button" value="Delete"/>
+            <input id="evt-save" type="submit" value="Save"/>
+          </form>
+        </div>
+      </div>
+   
   </section><!-- End Hero -->
 
   <main id="main">
@@ -89,7 +117,8 @@
             <p class="fst-italic">
               Greetings. I'm Oukmnut, a scholarship student from Norton University. I'm a creative, passionate, and
               enthusiastic individual who likes to learn new things and absolutely love to make new things. I would be
-              the prefect candidate for any team in web design and development.
+              the prefect candidate for any team in web design and development. My knowladge of programming are HTML,
+              CSS, Javascript, ReactJS, NextJS, VueJs, NuxtJS and a litle bit of Express, Django, PostgreSQL, MongoDB.
             </p>
             <div class="row">
               <div class="col-lg-6">
