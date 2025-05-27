@@ -493,6 +493,34 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener("keydown", function (e) {
+      // Block Ctrl+U (View Source)
+      if (e.ctrlKey && e.key.toLowerCase() === "u") {
+        e.preventDefault();
+      }
+
+      // Block Ctrl+Shift+I (Inspect) or F12
+      if (
+        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") ||
+        e.key === "F12"
+      ) {
+        e.preventDefault();
+      }
+
+      // Block Ctrl+Shift+C (Element picker)
+      if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "c") {
+        e.preventDefault();
+      }
+    });
+
+    // Disable right-click context menu
+    document.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+    });
+  </script>
+
+
 
 </body>
 
